@@ -16,17 +16,18 @@
     </div>
     <div class="forms-container">
         <form action="https://httpbin.org/post" method="post" class="main-forms">
+            <p class="form-title">Let's do this!</p>
             <div class="form-container">
                 <label for="first_name">First name:</label>
-                <input type="text" id="first_name" name="firstName">
+                <input type="text" id="first_name" name="firstName" required>
             </div>
             <div class="form-container">
                 <label for="last_name">Last name:</label>
-                <input type="text" id="last_name" name="lastName">
+                <input type="text" id="last_name" name="lastName" required>
             </div>
             <div class="form-container">
                 <label for="e-mail">Email:</label>
-                <input type="email" id="e-mail" name="Email">
+                <input type="email" id="e-mail" name="Email" required>
             </div>
             <div class="form-container">
                 <label for="telephone">Phone number:</label>
@@ -34,11 +35,11 @@
             </div>
             <div class="form-container">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="first_password">
+                <input type="password" id="password" name="first_password" required>
             </div>
             <div class="form-container">
-                <label for="confirm_password">Confirm Password:</label>
-                <input type="password" id="confirm_password" name="second_password">
+                <label for="confirm_password">Confirm Password<div class="required">*</div> :</label>
+                <input type="password" id="confirm_password" name="second_password" required>
             </div>
             <button type="submit">Create Account</button>
         </form>

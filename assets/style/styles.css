@@ -1,0 +1,55 @@
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.forms-container {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.form-container {
+    display: flex;
+    
+}
+
+.form-title {
+    
+}
+
+div {
+    text-transform: uppercase;
+}
+
+button {
+    color: white;
+    background-color: #596D48;
+    width: 200px;
+    border-radius: 7px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+input {
+    border-width: 3px;
+    border-radius: 7px;
+}
+
+input:focus {
+    outline:none;
+    box-shadow: none;
+
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
