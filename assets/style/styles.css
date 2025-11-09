@@ -17,14 +17,14 @@ body {
 }
 
 .right {
-    width: 50vw;
+    width: 60vw;
    
 
     display: flex;
     flex-flow: column nowrap;
    justify-content: center; 
 
-   background-color: #000000;
+   background-color: #121113;
 }
 
 .content, .logo {
@@ -46,6 +46,7 @@ body {
     top: 20vh;
     gap: 2vh;
     padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
 
     justify-content: center;
     align-items: center;
@@ -66,23 +67,33 @@ h1 {
     padding-bottom: 20px;
 }
 
-.form-container {
+
+
+
+
+.form-row {
     display: flex;
-    
+    gap: 70px;
+    width: 100%;
 }
 
-.form-title {
-    
-}
 
 
 
 button {
     color: white;
-    background-color: #000000;
+    background: none;
     width: 200px;
-    border-radius: 4px;
+    border-radius: 7px;
     border-color: #596D48;
+    border-width: 3px;
+
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #596D48;
 }
 
 .form-container {
@@ -90,9 +101,10 @@ button {
     display: flex;
     flex-flow: column wrap;
     width: 50%;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     opacity: 80%;
+    position: relative;
 }
 
 .form-title {
@@ -103,30 +115,55 @@ font-weight: 100;
 
 input {
     border-width: 3px;
-    border-radius: 2px;
+    border-radius: 7px;
     
+    font-family: inherit;
+    font-size: inherit;
     padding: 6px 8px;
+
+    color: white;
+    outline: none;
+    background: none;
 
     appearance: none;
      -webkit-appearance: none;
   -moz-appearance: none;
+
+
+}
+
+input:hover {
+   
 }
 
 input:focus {
-    outline:none;
-    
+    border-color: cyan;
 
 }
 
-input:invalid {
+
+
+input:user-invalid {
     border-color: red;
 }
 
-input:valid {
+input:user-valid {
     border-color: green;
     
 }
 
-.logo {
-    background-color: rgba(0, 0, 0, 0.7);
+label {
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    padding: 5px;
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: #121113;
+}
+
+label:has(+ input:focus), label:has(+ input:not(:placeholder-shown)){
+    top:-0.7rem;
+    font-size: 0.7rem;
+    left: 0.4rem;
 }
